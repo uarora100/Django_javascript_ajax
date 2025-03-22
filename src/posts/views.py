@@ -31,6 +31,7 @@ def post_list_and_create(request):
     return render(request, 'posts/main.html', context)
 
 def load_post_data_view(request, num_posts):
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':     # it means is_ajax()
         visible = 3
         upper = num_posts           
         lower = upper - visible         
