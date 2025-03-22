@@ -24,9 +24,10 @@ posts
                  <button type="button" class="btn-close add-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
                </div>
                <div class="modal-body">
-                    <form id="post-form">
+                    <form id="post-form" autocomplete="off">
                         {% csrf_token %}
-                        {{ form.as_p }}
+                        {{form|crispy}}
+                        <!-- {{ form.as_p }} -->
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger add-modal-close" data-bs-dismiss="modal">close</button>
                             <button type="submit" id="add-btn" class="btn btn-success">+ add</button>
