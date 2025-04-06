@@ -223,4 +223,5 @@ const myDropzone = new Dropzone('#my-dropzone',{
     acceptedFiles: '.png, .jpg, .jpeg'
 })
 getData()
+// the above is responsible to make web application more interactive 
  
